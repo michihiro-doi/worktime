@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class resttime extends Model
+class Resttime extends Model
 {
     //
 }

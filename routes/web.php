@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/', function () {return view('index');});
+Route::get('/','Controller@index');
+
+Route::resource('employees', 'EmployeeController');
