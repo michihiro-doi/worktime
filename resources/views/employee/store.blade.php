@@ -9,7 +9,7 @@
                     <p>{{$employee->name}}</p>
                 @endforeach
             @endisset
-                <form action="/employees" method="POST">
+                <form action="/employee" method="POST">
                 <input type="text" name="name" placeholder="スタッフの名前を入力">
                 <button type="submit">追加</button>
                 </form>

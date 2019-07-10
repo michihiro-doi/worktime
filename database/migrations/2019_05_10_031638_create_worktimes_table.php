@@ -14,14 +14,15 @@ class CreateWorktimesTable extends Migration
     public function up()
     {
         Schema::create('worktimes', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('start_time');
-            $table->integer('end_time');
-            $table->unsignedBigInteger('staff_id');
+            $table->increments('id');
+            $table->integer('employee_id')->unsigned();
+            $table->timestamp('start');
+            $table->timestamp('end');
+            $table->integer('is_rest')->default(false);
             $table->timestamps();
 
-            $table->foreign('staff_id')
-            ->references('id')->on('staffs')->onDelete('cascade');
+            $table->foreign('employee_id')
+            ->references('id')->on('employees')->onDelete('cascade');
 
         });
     }

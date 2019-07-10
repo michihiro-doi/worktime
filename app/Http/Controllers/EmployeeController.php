@@ -22,7 +22,7 @@ class EmployeeController extends Controller
     public function index()
     {
         $employees = $this->employees->all();
-        return view("/employees.index",["employees"=>$employees]);
+        return view("/employee.index",["employees"=>$employees]);
     }
 
     /**
@@ -52,7 +52,7 @@ class EmployeeController extends Controller
             ]);
 
         $employees = $this->employees->all();
-        return view('/employees.index',["employees"=>$employees]);
+        return view('/employee.index',["employees"=>$employees]);
     }
 
     /**
@@ -99,6 +99,6 @@ class EmployeeController extends Controller
     {
         $employee = $this->employees->find($id);
         $employee->delete();
-        return redirect('employees');
+        return redirect('employee');
     }
 }

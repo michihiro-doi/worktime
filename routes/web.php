@@ -12,5 +12,8 @@
 */
 
 Route::get('/','Controller@index');
+Route::resource('employee', 'EmployeeController');
 
-Route::resource('employees', 'EmployeeController');
+Route::get('record','RecordController@index');
+Route::get("record/record/{id}",'RecordController@detail');
+Route::post("record/record/{id}",'RecordController@record');

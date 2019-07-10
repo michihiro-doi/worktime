@@ -22,6 +22,18 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+
+<div class="row text-center mt-5">
+    <div class="col-4">
+        <a  href={{url('/employee')}} class="btn-lg btn-primary">スタッフ</a>
+    </div>
+    <div class="col-4">
+        <a  href="/record" class="btn-lg btn-primary">勤怠管理</a>
+    </div>
+    <div class="col-4">
+        <a  href="/data" class="btn-lg btn-primary">出勤記録</a>
+    </div>
+</div>
     <main class="p-4">
         @yield('content')
         @yield('script')
